@@ -3,7 +3,7 @@
 #include <cmath>
 
 using namespace std;
-using namespace DESY;
+using namespace UZH;
 
 Particle::Particle() :
   m_e( 0 ),

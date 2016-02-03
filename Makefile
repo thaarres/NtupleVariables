@@ -1,5 +1,5 @@
 # Package information
-LIBRARY = D3PDVariables
+LIBRARY = NtupleVariables
 OBJDIR  = obj
 DEPDIR  = $(OBJDIR)/dep
 SRCDIR  = src

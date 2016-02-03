@@ -2,7 +2,7 @@
 
 
 using namespace std;
-using namespace DESY;
+using namespace UZH;
 
 void ContainerBase::Set(string name, int value) {
 

@@ -1,10 +1,10 @@
 // Dear emacs, this is -*- c++ -*-
-// $Id: EventInfoD3PDObject.h 43055 2015-01-29 16:26:25Z clange $
-#ifndef SFRAME_D3PDVARIABLES_EventInfoD3PDObject_H
-#define SFRAME_D3PDVARIABLES_EventInfoD3PDObject_H
+// $Id: EventInfoNtupleObject.h 43055 2015-01-29 16:26:25Z clange $
+#ifndef SFRAME_NtupleVARIABLES_EventInfoNtupleObject_H
+#define SFRAME_NtupleVARIABLES_EventInfoNtupleObject_H
 
 // Local include(s):
-#include "D3PDObjectNames.h"
+#include "NtupleObjectNames.h"
 
 // STL include(s):
 #include <vector>
@@ -17,10 +17,10 @@
 #include "core/include/SCycleBaseNTuple.h"
 #include "plug-ins/include/SInputVariables.h"
 
-namespace D3PD {
+namespace Ntuple {
 
   /**
-  *  @short Class that can read the variables produced by EventInfoD3PDObject
+  *  @short Class that can read the variables produced by EventInfoNtupleObject
   *
   *         This class can be used to read the offline muon information from
   *         an ntuple produced by the SingleTopDPDMaker code.
@@ -39,13 +39,13 @@ namespace D3PD {
     EventInfoMETFilters = 16
   };
   
-  // forward declaration of D3PDObjectNames
-  class D3PDObjectNames;
-  class EventInfoD3PDObject : public SInputVariables< SCycleBaseNTuple > {
+  // forward declaration of NtupleObjectNames
+  class NtupleObjectNames;
+  class EventInfoNtupleObject : public SInputVariables< SCycleBaseNTuple > {
 
     public:
     /// Constructor specifying the parent of the object
-    EventInfoD3PDObject( SCycleBaseNTuple* parent );
+    EventInfoNtupleObject( SCycleBaseNTuple* parent );
 
     /// Connect the variables to the input branches
     void ConnectVariables( const TString& treeName,
@@ -104,8 +104,8 @@ namespace D3PD {
     // save actual detail_level
     Int_t detailLevel;
 
-  }; // class EventInfoD3PDObject
+  }; // class EventInfoNtupleObject
 
-} // namespace D3PD
+} // namespace Ntuple
 
-#endif // SFRAME_D3PDVARIABLES_EventInfoD3PDObject_H
+#endif // SFRAME_NtupleVARIABLES_EventInfoNtupleObject_H

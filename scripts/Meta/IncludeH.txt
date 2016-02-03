@@ -2,30 +2,30 @@
 // ${AUTO_WARNING}
 // ${Program}
 
-#ifndef __DESYTOP_${Object}_H__
-#define __DESYTOP_${Object}_H__
+#ifndef __UZHTOP_${Object}_H__
+#define __UZHTOP_${Object}_H__
 
 #include <cmath>
 #include "Particle.h"
 #include <vector>
-#include "${Object}D3PDObject.h"
+#include "${Object}NtupleObject.h"
 
 ${{Only:Muon:
 class TRandom;
 }}
 
-namespace D3PD {
-  class ${Object}D3PDObject;
+namespace Ntuple {
+  class ${Object}NtupleObject;
 }
 
-namespace DESY {
+namespace UZH {
   
   /**
-   *  @short Class that maps ${Object}D3PDObjects to ${Object} Particle class
+   *  @short Class that maps ${Object}NtupleObjects to ${Object} Particle class
    *
    *         This class can be used to map the offline ${Object} information from
-   *         ${Object}D3PDObjects to DESY::${Object} class. All particles inherit 
-   *         from DESY::Particle.
+   *         ${Object}NtupleObjects to UZH::${Object} class. All particles inherit 
+   *         from UZH::Particle.
    *
    * @author ${Program}
    *
@@ -42,7 +42,7 @@ ${{Only:Jet,Muon,Electron,Tau,TruthJet,GenParticle: , public Particle }}
     ~${Object}();
     
     /// c'tor with index
-    ${Object}( const D3PD::${Object}D3PDObject* ana, const Int_t idx );
+    ${Object}( const Ntuple::${Object}NtupleObject* ana, const Int_t idx );
 ${{Only:Muon,Electron,Jet,TruthJet,GenParticle:
     TLorentzVector* getTLV() const;
     TLorentzVector tlv() const;
@@ -78,12 +78,12 @@ ${{Only:Jet:
     void           scaleJES( const floatingnumber scale);
 }}
 
-    // check level given here must be consistent with ...D3PDObject.cxx, otherwise you'll get a segfault
-${{AllVars:    #type# #name#() const { /*if(!m_ana->getConnectSucceeded(D3PD::${Object}D3PDObject::k#name#)) std::cout<<"#name# not connected!"<<std::endl;*/ return *(m_#name#);NOPOINTER } }}    
+    // check level given here must be consistent with ...NtupleObject.cxx, otherwise you'll get a segfault
+${{AllVars:    #type# #name#() const { /*if(!m_ana->getConnectSucceeded(Ntuple::${Object}NtupleObject::k#name#)) std::cout<<"#name# not connected!"<<std::endl;*/ return *(m_#name#);NOPOINTER } }}    
 ${{AllVars:    void #name#( const #type#& val){ *(m_#name#)=val;NOPOINTER } }}    
 
   private:
-    const D3PD::${Object}D3PDObject* m_ana;
+    const Ntuple::${Object}NtupleObject* m_ana;
   }; // class ${Object}
 
   typedef std::vector< ${Object} > ${Object}Vec;
@@ -104,11 +104,11 @@ ${{Only:Muon,Electron:
 }}
 
 
-} // end of namespace DESY
+} // end of namespace UZH
 
 /// output stream operator overloaded for ${Object} objects
 std::ostream& operator<<( std::ostream& out,
-                          const DESY::${Object}& rhs );
+                          const UZH::${Object}& rhs );
 
 
-#endif //__DESY_${Object}_H__
+#endif //__UZH_${Object}_H__

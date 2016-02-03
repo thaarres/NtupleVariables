@@ -2,7 +2,7 @@
 # -*- coding: iso-8859-15 -*-
 #
 #
-#   @short: Create code f???r reading in the variables from ntuples into the D3PD objects.
+#   @short: Create code f???r reading in the variables from ntuples into the Ntuple objects.
 #
 #  @author: Alexander Mann (85) <mann@cern.ch> or <amann@uni-goettingen.de>
 #
@@ -214,9 +214,9 @@ class Templater:
         result = result + "if( "
         for i,detlev in enumerate(dl.split(',')): 
           if i: result += " || "
-          result += " ((%s & D3PD::%s%s) == D3PD::%s%s) " % (what, objectname, detlev, objectname, detlev)
+          result += " ((%s & Ntuple::%s%s) == Ntuple::%s%s) " % (what, objectname, detlev, objectname, detlev)
         result = result + " ) {\n"
-        #result = result + "if( (%s & D3PD::%s%s) == D3PD::%s%s ) {\n" % (what, objectname, dl, objectname, dl)
+        #result = result + "if( (%s & Ntuple::%s%s) == Ntuple::%s%s ) {\n" % (what, objectname, dl, objectname, dl)
         result = result + "%s " % prefix
         lastdl = dl
       for key in vars.keys():
@@ -256,9 +256,9 @@ class Templater:
         result = result + "if( "
         for i,detlev in enumerate(dl.split(',')): 
           if i: result += " || "
-          result += " ((%s & D3PD::%s%s) == D3PD::%s%s) " % (what, objectname, detlev, objectname, detlev)
+          result += " ((%s & Ntuple::%s%s) == Ntuple::%s%s) " % (what, objectname, detlev, objectname, detlev)
         result = result + " ) {\n"
-        #result = result + "if( (%s & D3PD::%s%s) == D3PD::%s%s ) {\n" % (what, objectname, dl, objectname, dl)
+        #result = result + "if( (%s & Ntuple::%s%s) == Ntuple::%s%s ) {\n" % (what, objectname, dl, objectname, dl)
         result = result + "%s " % prefix
         first = False
         lastdl = dl
@@ -328,8 +328,8 @@ class Templater:
 
 ### Configuration
 os.environ.keys( )
-metadir   = os.environ['SFRAME_DIR'] + '/../Common/D3PDVariables/scripts/Meta/'
-targetdir = os.environ['SFRAME_DIR'] + '/../Common/D3PDVariables/'
+metadir   = os.environ['SFRAME_DIR'] + '/../NtupleVariables/scripts/Meta/'
+targetdir = os.environ['SFRAME_DIR'] + '/../NtupleVariables/'
 use_dl    = True
 
 # define additional substitutions here
@@ -366,10 +366,10 @@ for objectname, objectdefs in objects.items():
   ### create src/object.cxx
   templater.CodeIt(metadir + 'SrcCxx.txt',   targetdir + 'src/%s.cxx' % objectname)
 
-  ### create src/objectD3PDobject.h
-  templater.CodeIt(metadir + 'IncludeObjectH.txt', targetdir + 'include/%sD3PDObject.h' % objectname)
+  ### create src/objectNtupleobject.h
+  templater.CodeIt(metadir + 'IncludeObjectH.txt', targetdir + 'include/%sNtupleObject.h' % objectname)
 
-  ### create src/objectD3PDobject.cxx
-  templater.CodeIt(metadir + 'SrcObjectCxx.txt',   targetdir + 'src/%sD3PDObject.cxx' % objectname)
+  ### create src/objectNtupleobject.cxx
+  templater.CodeIt(metadir + 'SrcObjectCxx.txt',   targetdir + 'src/%sNtupleObject.cxx' % objectname)
 
   

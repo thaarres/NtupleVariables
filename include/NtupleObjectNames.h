@@ -1,8 +1,8 @@
 // Dear emacs, this is -*- c++ -*-
-// $Id: D3PDObjectNames.h 42092 2014-03-19 15:37:47Z lrehnisc $
+// $Id: NtupleObjectNames.h 42092 2014-03-19 15:37:47Z lrehnisc $
 
-#ifndef SFRAME_D3PDVARIABLES_D3PDObjectNames_H
-#define SFRAME_D3PDVARIABLES_D3PDObjectNames_H
+#ifndef SFRAME_NtupleVARIABLES_NtupleObjectNames_H
+#define SFRAME_NtupleVARIABLES_NtupleObjectNames_H
 
 // STL include(s):
 #include <map>
@@ -14,14 +14,14 @@
 // SFrame include(s):
 #include "core/include/SError.h"
 
-namespace D3PD {
+namespace Ntuple {
 
   /**
   *  @short Class that returns the right branch names for ntuple type
   *
   *         This class can be used to return the right branch names 
   *         ntuple type, for instance for ntuples created by the SingleTopDPDMaker
-  *         code or SM D3PDs.
+  *         code or SM Ntuples.
   *
   * @author Clemens Lange <Clemens.Lange@desy.de>
   *
@@ -30,11 +30,11 @@ namespace D3PD {
   */
   // pseudo-flexibility for different ntuples, also change in Particle.h
   typedef float floatingnumber;
-  class D3PDObjectNames {
+  class NtupleObjectNames {
 
     public:
       /// Constructor
-      D3PDObjectNames( const TString& ntupleType = "UZHCMSNtuple" );
+      NtupleObjectNames( const TString& ntupleType = "UZHCMSNtuple" );
       
       /// Return names saved in map 
       TString getName( const TString& name );
@@ -57,8 +57,8 @@ namespace D3PD {
       // and THE prefix map
       std::map<TString, TString> m_prefixes;
 
-  }; // class D3PDObjectNames
+  }; // class NtupleObjectNames
   
-} // namespace D3PD
+} // namespace Ntuple
 
-#endif // SFRAME_D3PDVARIABLES_D3PDObjectNames_H
+#endif // SFRAME_NtupleVARIABLES_NtupleObjectNames_H
