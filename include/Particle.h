@@ -1,12 +1,12 @@
-#ifndef __DESY_PARTICLE_H__
-#define __DESY_PARTICLE_H__
+#ifndef __UZH_PARTICLE_H__
+#define __UZH_PARTICLE_H__
 
 #include "../include/Basic.h"
 #include "TLorentzVector.h"
 #include "core/include/SError.h"
 #include "../include/ContainerBase.h"
 
-namespace DESY {
+namespace UZH {
 
   /**
  *  @short Basic particle class providing some functionality 
@@ -73,6 +73,6 @@ namespace DESY {
 
 /// output operator for particles
 std::ostream& operator<<( std::ostream& out,
-                          const DESY::Particle& rhs );
+                          const UZH::Particle& rhs );
 
-#endif //__DESY_PARTICLE_H__
+#endif //__UZH_PARTICLE_H__

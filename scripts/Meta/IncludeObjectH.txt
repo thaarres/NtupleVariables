@@ -1,15 +1,15 @@
 // Dear emacs, this is -*- c++ -*-
-// $Id: ${Object}D3PDObject.h 37457 2010-07-05 12:04:33Z mann $
+// $Id: ${Object}NtupleObject.h 37457 2010-07-05 12:04:33Z mann $
 
 // ${AUTO_WARNING}
 // ${Program}
 
 
-#ifndef SFRAME_D3PDVARIABLES_${Object}D3PDObject_H
-#define SFRAME_D3PDVARIABLES_${Object}D3PDObject_H
+#ifndef SFRAME_NtupleVARIABLES_${Object}NtupleObject_H
+#define SFRAME_NtupleVARIABLES_${Object}NtupleObject_H
 
 // Local include(s):
-#include "D3PDObjectNames.h"
+#include "NtupleObjectNames.h"
 
 // STL include(s):
 #include <vector>
@@ -23,10 +23,10 @@
 #include "core/include/SCycleBaseNTuple.h"
 #include "plug-ins/include/SInputVariables.h"
 
-namespace D3PD {
+namespace Ntuple {
 
   /**
-  *  @short Class that can read the variables produced by ${Object}D3PDObject
+  *  @short Class that can read the variables produced by ${Object}NtupleObject
   *
   *         This class can be used to read the offline muon information from
   *         an ntuple produced by the SingleTopDPDMaker code.
@@ -39,13 +39,13 @@ namespace D3PD {
 ${{Enums: }}
   };
   
-  // forward declaration of D3PDObjectNames
-  class D3PDObjectNames;
-  class ${Object}D3PDObject : public SInputVariables< SCycleBaseNTuple > {
+  // forward declaration of NtupleObjectNames
+  class NtupleObjectNames;
+  class ${Object}NtupleObject : public SInputVariables< SCycleBaseNTuple > {
 
     public:
     /// Constructor specifying the parent of the object
-    ${Object}D3PDObject( SCycleBaseNTuple* parent );
+    ${Object}NtupleObject( SCycleBaseNTuple* parent );
 
     /// remember if connect succeeded
     void setConnectSucceeded(const unsigned int index, const bool success);
@@ -55,11 +55,11 @@ ${{Enums: }}
     void ConnectVariables( const TString& treeName,
                            UInt_t detail_level = 0,
                            const TString& prefix = "${Object}_",
-                           const TString& ntupleType = "D3PDMakerD3PD" ) throw( SError );
+                           const TString& ntupleType = "NtupleMakerNtuple" ) throw( SError );
 
     void ConnectVariables( const TString& treeName,
                            const TString& prefix = "${Object}_",
-                           const TString& ntupleType = "D3PDMakerD3PD" ) throw( SError );
+                           const TString& ntupleType = "NtupleMakerNtuple" ) throw( SError );
 
     int getDetailLevel() const {return detailLevel;}   
 
@@ -86,8 +86,8 @@ ${{AllVars:    std::vector< #type# >  *#name#;NOPOINTER}}
     Int_t detailLevel;
     std::string detailGroup;
 
-  }; // class ${Object}D3PDObject
+  }; // class ${Object}NtupleObject
 
-} // namespace D3PD
+} // namespace Ntuple
 
-#endif // SFRAME_D3PDVARIABLES_${Object}D3PDObject_H
+#endif // SFRAME_NtupleVARIABLES_${Object}NtupleObject_H

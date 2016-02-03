@@ -3,7 +3,7 @@
 #include <cmath>
 
 using namespace std;
-using namespace DESY;
+using namespace UZH;
 
 Basic::Basic( int idx ) :
   ContainerBase(),

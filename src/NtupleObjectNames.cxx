@@ -1,27 +1,27 @@
-// $Id: D3PDObjectNames.cxx 43055 2015-01-29 16:26:25Z gherbert $
+// $Id: NtupleObjectNames.cxx 43055 2015-01-29 16:26:25Z gherbert $
 
 // TODO:
 // * provide default values instead of always having to define all names
 
 // Local include(s):
-#include "../include/D3PDObjectNames.h"
+#include "../include/NtupleObjectNames.h"
 
-namespace D3PD {
+namespace Ntuple {
 
-  D3PDObjectNames::D3PDObjectNames( const TString& ntupleType ) {
+  NtupleObjectNames::NtupleObjectNames( const TString& ntupleType ) {
 
     FillMap(ntupleType);
 
   }
 
-  void D3PDObjectNames::FillMap( TString ntupleType) throw( SError ) {
+  void NtupleObjectNames::FillMap( TString ntupleType) throw( SError ) {
 
     //
     // depending on ntupleType fill map
     //
     
     //bw comp.
-    if (ntupleType == "D3PDMakerD3PD")          ntupleType = "UZHCMSNtuple";
+    if (ntupleType == "NtupleMakerNtuple")          ntupleType = "UZHCMSNtuple";
 
     if (ntupleType == "UZHCMSNtuple") {
       FillUZHCMSNtuple();
@@ -33,7 +33,7 @@ namespace D3PD {
 
   }
 
-  void D3PDObjectNames::FillUZHCMSNtuple() {
+  void NtupleObjectNames::FillUZHCMSNtuple() {
     
     m_names["N"] = "N";
     // general kinematics
@@ -252,32 +252,32 @@ namespace D3PD {
     
   }
 
-  TString D3PDObjectNames::getName( const TString& name ) {
+  TString NtupleObjectNames::getName( const TString& name ) {
 
     // check if key exists
     std::map<TString, TString>::iterator found = m_names.find( name ); // Search for key
     if ( found != m_names.end() ) {
       return m_names[name];
     } else {
-      //m_logger << WARNING << "D3PDObjectName" << name << "not found in map" << SLogger::endmsg;
-      std::cout << "WARNING: D3PDObjectName " << name << " not found in map" << std::endl;
+      //m_logger << WARNING << "NtupleObjectName" << name << "not found in map" << SLogger::endmsg;
+      std::cout << "WARNING: NtupleObjectName " << name << " not found in map" << std::endl;
       return name;
     }
 
   }
 
 
-  TString D3PDObjectNames::getPrefix( const TString& name ) {
+  TString NtupleObjectNames::getPrefix( const TString& name ) {
 
     // check if key exists
     std::map<TString, TString>::iterator found = m_prefixes.find( name ); // Search for key
     if ( found != m_prefixes.end() ) {
       return m_prefixes[name];
     } else {
-      throw SError( Form("D3PDObjectName %s not available!", name.Data()), SError::StopExecution );
+      throw SError( Form("NtupleObjectName %s not available!", name.Data()), SError::StopExecution );
     }
 
   }
 
 
-} // namespace D3PD
+} // namespace Ntuple

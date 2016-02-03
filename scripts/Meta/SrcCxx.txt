@@ -5,14 +5,14 @@
 #include "../include/${Object}.h"
 
 using namespace std;
-using namespace DESY;
+using namespace UZH;
 
 ${Object}::${Object}() {
   
 }
 
 
-${Object}::${Object}( const D3PD::${Object}D3PDObject* ana, const Int_t idx ) 
+${Object}::${Object}( const Ntuple::${Object}NtupleObject* ana, const Int_t idx ) 
 : Basic( idx )
 ${{Only:TruthJet,GenParticle,Jet,Muon,Electron: , Particle() }}
 
@@ -37,7 +37,7 @@ ${{AllVarsDL:ana->detailLevel:    if (ana->m_connectsucceeded[#index#]) m_#name#
 
 ${{Only:Muon:
  //Set ptMS and ptID
- //if( (ana->detailLevel & D3PD::MuonAnalysis) == D3PD::MuonAnalysis ) {
+ //if( (ana->detailLevel & Ntuple::MuonAnalysis) == Ntuple::MuonAnalysis ) {
  //   if(me_qoverp()!=0) m_ptMS = 1./std::fabs(me_qoverp()) * std::sin(me_theta()); else m_ptMS = 0; 
  //	  if(id_qoverp()!=0) m_ptID = 1./std::fabs(id_qoverp()) * std::sin(id_theta()); else m_ptID = 0; 
  //}

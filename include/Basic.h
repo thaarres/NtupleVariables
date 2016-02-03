@@ -1,12 +1,12 @@
-#ifndef __DESY_Basic_H__
-#define __DESY_Basic_H__
+#ifndef __UZH_Basic_H__
+#define __UZH_Basic_H__
 
 #include "core/include/SError.h"
 #include "../include/ContainerBase.h"
 
-namespace DESY {
+namespace UZH {
 
-  // pseudo-flexibility for different ntuples, also change in D3PDObjectNames.h
+  // pseudo-flexibility for different ntuples, also change in NtupleObjectNames.h
   typedef float floatingnumber;
 
   class Basic: public ContainerBase {
@@ -50,6 +50,6 @@ namespace DESY {
 
 /// output operator for Basics
 std::ostream& operator<<( std::ostream& out,
-                          const DESY::Basic& rhs );
+                          const UZH::Basic& rhs );
 
-#endif //__DESY_Basic_H__
+#endif //__UZH_Basic_H__

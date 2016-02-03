@@ -1,5 +1,5 @@
-#ifndef __DESY_CONTAINERBASE_H__
-#define __DESY_CONTAINERBASE_H__
+#ifndef __UZH_CONTAINERBASE_H__
+#define __UZH_CONTAINERBASE_H__
 
  /**
  *  @short Extension for basic particle class to store additional variables
@@ -22,7 +22,7 @@
 #include "core/include/SError.h"
 
 
-namespace DESY {
+namespace UZH {
 
 //   class printable {
 //   
@@ -80,11 +80,11 @@ namespace DESY {
 
   }; // class ContainerBase
 
-}; // namespace DESY
+}; // namespace UZH
 
 
   /// output operator for ContainerBase
-  //std::ostream& operator<<( std::ostream& out, DESY::ContainerBase& rhs );
+  //std::ostream& operator<<( std::ostream& out, UZH::ContainerBase& rhs );
 
 
-#endif // __DESY_CONTAINERBASE_H__
+#endif // __UZH_CONTAINERBASE_H__

@@ -1,21 +1,21 @@
-// $Id: EventInfoD3PDObject.cxx 43055 2015-01-29 16:26:25Z clange $
+// $Id: EventInfoNtupleObject.cxx 43055 2015-01-29 16:26:25Z clange $
 
 // Local include(s):
-#include "../include/EventInfoD3PDObject.h"
+#include "../include/EventInfoNtupleObject.h"
 
-namespace D3PD {
+namespace Ntuple {
 
-  EventInfoD3PDObject::EventInfoD3PDObject( SCycleBaseNTuple* parent ) : SInputVariables< SCycleBaseNTuple >( parent ) {
+  EventInfoNtupleObject::EventInfoNtupleObject( SCycleBaseNTuple* parent ) : SInputVariables< SCycleBaseNTuple >( parent ) {
   }
 
 
-  void EventInfoD3PDObject::ConnectVariables( const TString& treeName,
+  void EventInfoNtupleObject::ConnectVariables( const TString& treeName,
                                               UInt_t detail_level,
                                               const TString& prefix,
                                               const TString& ntupleType ) throw( SError ) {
 
-    // get instance of D3PDObjectNames
-    D3PDObjectNames m_objectNames(ntupleType);
+    // get instance of NtupleObjectNames
+    NtupleObjectNames m_objectNames(ntupleType);
     //
     // variables to be connected:
     //
@@ -23,24 +23,24 @@ namespace D3PD {
     ConnectVariable( treeName, m_objectNames.getName("eventNumber"), eventNumber );
     ConnectVariable( treeName, m_objectNames.getName("lumiBlock"  ), lumiBlock            );
 
-    if( ( (detail_level & D3PD::EventInfoBasic) == D3PD::EventInfoBasic) ) {
+    if( ( (detail_level & Ntuple::EventInfoBasic) == Ntuple::EventInfoBasic) ) {
       ConnectVariable( treeName, m_objectNames.getName("averageIntPerXing"    ), averageIntPerXing    );
       ConnectVariable( treeName, m_objectNames.getName("actualIntPerXing"     ), actualIntPerXing     );
       ConnectVariable( treeName, m_objectNames.getName("bunchCrossing"        ), bunchCrossing        );
     }
-    if( (detail_level & D3PD::EventInfoTrigger) == D3PD::EventInfoTrigger ) {
+    if( (detail_level & Ntuple::EventInfoTrigger) == Ntuple::EventInfoTrigger ) {
       ConnectVariable( treeName, m_objectNames.getName("trigDecision"), trigDecision  );
     }
-    if( (detail_level & D3PD::EventInfoTruth) == D3PD::EventInfoTruth ) {
+    if( (detail_level & Ntuple::EventInfoTruth) == Ntuple::EventInfoTruth ) {
       ConnectVariable( treeName, m_objectNames.getName("genEventWeight"   ), genEventWeight     );
     }
-    if( (detail_level & D3PD::EventInfoPDF) == D3PD::EventInfoPDF  ) {
+    if( (detail_level & Ntuple::EventInfoPDF) == Ntuple::EventInfoPDF  ) {
       ConnectVariable( treeName, m_objectNames.getName("pdf_id"), pdf_id );
       ConnectVariable( treeName, m_objectNames.getName("pdf_x"), pdf_x );
       ConnectVariable( treeName, m_objectNames.getName("pdf_xPDF"), pdf_xPDF );
       ConnectVariable( treeName, m_objectNames.getName("pdf_scale"), pdf_scale );
     }
-    if( (detail_level & D3PD::EventInfoMETFilters) == D3PD::EventInfoMETFilters  ) {
+    if( (detail_level & Ntuple::EventInfoMETFilters) == Ntuple::EventInfoMETFilters  ) {
       ConnectVariable( treeName, m_objectNames.getName("passFilter_HBHE"), passFilter_HBHE );
       ConnectVariable( treeName, m_objectNames.getName("passFilter_HBHEIso"), passFilter_HBHEIso );
       ConnectVariable( treeName, m_objectNames.getName("passFilter_HBHELoose"), passFilter_HBHELoose );
@@ -63,4 +63,4 @@ namespace D3PD {
     
   }
 
-} // namespace D3PD
+} // namespace Ntuple
