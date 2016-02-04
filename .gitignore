@@ -31,18 +31,3 @@ obj/
 # SFrame dictionaries
 *.pcm
 *_Dict.cxx
-
-# files that are created by script, but not the manually created ones
-src/*.cxx
-src/Basic.cxx
-src/ContainerBase.cxx
-src/NtupleObjectNames.cxx
-src/EventInfoNtupleObject.cxx
-src/Particle.cxx
-include/*.h
-include/Basic.h
-include/ContainerBase.h
-include/NtupleObjectNames.h
-include/EventInfoNtupleObject.h
-include/Particle.h
-include/NtupleVariables_LinkDef.h
