@@ -46,6 +46,7 @@ Substructure	floatingnumber*	pruned_jecDown
 Substructure	floatingnumber*	softdrop_jec
 # Substructure	floatingnumber*	softdrop_jecUp
 # Substructure	floatingnumber*	softdrop_jecDown
+Substructure	floatingnumber*	Hbbtag
 
 Truth	int*	partonFlavour
 Truth	int*	hadronFlavour

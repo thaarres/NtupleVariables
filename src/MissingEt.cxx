@@ -32,6 +32,10 @@ MissingEt::MissingEt( const Ntuple::MissingEtNtupleObject* ana, const Int_t idx 
 if(  ((ana->detailLevel & Ntuple::MissingEtAnalysis) == Ntuple::MissingEtAnalysis)  ) {
      if (ana->m_connectsucceeded[4]) m_corrPx = &((*ana->corrPx)[idx]); else m_corrPx = 0; 
     if (ana->m_connectsucceeded[5]) m_corrPy = &((*ana->corrPy)[idx]); else m_corrPy = 0; 
+    if (ana->m_connectsucceeded[6]) m_significance = &((*ana->significance)[idx]); else m_significance = 0; 
+    if (ana->m_connectsucceeded[7]) m_cov00 = &((*ana->cov00)[idx]); else m_cov00 = 0; 
+    if (ana->m_connectsucceeded[8]) m_cov10 = &((*ana->cov10)[idx]); else m_cov10 = 0; 
+    if (ana->m_connectsucceeded[9]) m_cov11 = &((*ana->cov11)[idx]); else m_cov11 = 0; 
 } // end of detail level Analysis
 
 if(  ((ana->detailLevel & Ntuple::MissingEtBasic) == Ntuple::MissingEtBasic)  ) {
@@ -64,6 +68,10 @@ ostream& operator<<( ostream& out,
 if(  ((rhs.getLvl() & Ntuple::MissingEtAnalysis) == Ntuple::MissingEtAnalysis)  ) {
    out << " corrPx " << rhs.corrPx();
   out << " corrPy " << rhs.corrPy();
+  out << " significance " << rhs.significance();
+  out << " cov00 " << rhs.cov00();
+  out << " cov10 " << rhs.cov10();
+  out << " cov11 " << rhs.cov11();
 ;
 } // end of detail level Analysis
 

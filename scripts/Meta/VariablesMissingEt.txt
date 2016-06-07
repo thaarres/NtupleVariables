@@ -12,3 +12,7 @@ Basic	floatingnumber*	sumEt
 
 Analysis	floatingnumber*	corrPx
 Analysis	floatingnumber*	corrPy
+Analysis	floatingnumber*	significance
+Analysis	floatingnumber*	cov00
+Analysis	floatingnumber*	cov10
+Analysis	floatingnumber*	cov11

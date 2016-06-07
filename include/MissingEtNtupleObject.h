@@ -70,6 +70,10 @@ namespace Ntuple {
     enum ConnectionIndex { 
      kcorrPx=4, 
      kcorrPy=5, 
+     ksignificance=6, 
+     kcov00=7, 
+     kcov10=8, 
+     kcov11=9, 
      ket=1, 
      kphi=2, 
      ksumEt=3, 
@@ -85,6 +89,10 @@ namespace Ntuple {
     // vectors of object specific variables
     std::vector< floatingnumber >  *corrPx;
     std::vector< floatingnumber >  *corrPy;
+    std::vector< floatingnumber >  *significance;
+    std::vector< floatingnumber >  *cov00;
+    std::vector< floatingnumber >  *cov10;
+    std::vector< floatingnumber >  *cov11;
     std::vector< floatingnumber >  *et;
     std::vector< floatingnumber >  *phi;
     std::vector< floatingnumber >  *sumEt;
