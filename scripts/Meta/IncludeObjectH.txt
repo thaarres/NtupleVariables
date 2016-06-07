@@ -63,7 +63,7 @@ ${{Enums: }}
 
     int getDetailLevel() const {return detailLevel;}   
 
-${{Only:Muon,Electron,Jet,TruthJet,GenParticle:
+${{Only:Muon,Electron,Tau,Jet,TruthJet,GenParticle:
     // particle vector size
     Int_t                   N;
 }}   

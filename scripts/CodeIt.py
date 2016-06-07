@@ -337,7 +337,7 @@ objects = {
   'Jet'           : {},
   'Muon'          : {},
   'Electron'      : {},
-  # 'Tau'           : {},
+  'Tau'           : {},
   # 'Vertex'        : {'NoBasics': ''},
   # 'TrackParticle' : {'NoBasics': ''},
   # 'TruthJet'      : {},

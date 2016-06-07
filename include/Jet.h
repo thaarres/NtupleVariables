@@ -117,6 +117,7 @@ namespace UZH {
     floatingnumber* m_pruned_jecUp;
     floatingnumber* m_pruned_jecDown;
     floatingnumber* m_softdrop_jec;
+    floatingnumber* m_Hbbtag;
     int* m_partonFlavour;
     int* m_hadronFlavour;
     int* m_genParton_pdgID;
@@ -198,6 +199,7 @@ namespace UZH {
     floatingnumber pruned_jecUp() const { /*if(!m_ana->getConnectSucceeded(Ntuple::JetNtupleObject::kpruned_jecUp)) std::cout<<"pruned_jecUp not connected!"<<std::endl;*/ return *(m_pruned_jecUp); } 
     floatingnumber pruned_jecDown() const { /*if(!m_ana->getConnectSucceeded(Ntuple::JetNtupleObject::kpruned_jecDown)) std::cout<<"pruned_jecDown not connected!"<<std::endl;*/ return *(m_pruned_jecDown); } 
     floatingnumber softdrop_jec() const { /*if(!m_ana->getConnectSucceeded(Ntuple::JetNtupleObject::ksoftdrop_jec)) std::cout<<"softdrop_jec not connected!"<<std::endl;*/ return *(m_softdrop_jec); } 
+    floatingnumber Hbbtag() const { /*if(!m_ana->getConnectSucceeded(Ntuple::JetNtupleObject::kHbbtag)) std::cout<<"Hbbtag not connected!"<<std::endl;*/ return *(m_Hbbtag); } 
     int partonFlavour() const { /*if(!m_ana->getConnectSucceeded(Ntuple::JetNtupleObject::kpartonFlavour)) std::cout<<"partonFlavour not connected!"<<std::endl;*/ return *(m_partonFlavour); } 
     int hadronFlavour() const { /*if(!m_ana->getConnectSucceeded(Ntuple::JetNtupleObject::khadronFlavour)) std::cout<<"hadronFlavour not connected!"<<std::endl;*/ return *(m_hadronFlavour); } 
     int genParton_pdgID() const { /*if(!m_ana->getConnectSucceeded(Ntuple::JetNtupleObject::kgenParton_pdgID)) std::cout<<"genParton_pdgID not connected!"<<std::endl;*/ return *(m_genParton_pdgID); } 
@@ -266,6 +268,7 @@ namespace UZH {
     void pruned_jecUp( const floatingnumber& val){ *(m_pruned_jecUp)=val; } 
     void pruned_jecDown( const floatingnumber& val){ *(m_pruned_jecDown)=val; } 
     void softdrop_jec( const floatingnumber& val){ *(m_softdrop_jec)=val; } 
+    void Hbbtag( const floatingnumber& val){ *(m_Hbbtag)=val; } 
     void partonFlavour( const int& val){ *(m_partonFlavour)=val; } 
     void hadronFlavour( const int& val){ *(m_hadronFlavour)=val; } 
     void genParton_pdgID( const int& val){ *(m_genParton_pdgID)=val; } 

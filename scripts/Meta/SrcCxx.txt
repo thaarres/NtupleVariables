@@ -14,7 +14,7 @@ ${Object}::${Object}() {
 
 ${Object}::${Object}( const Ntuple::${Object}NtupleObject* ana, const Int_t idx ) 
 : Basic( idx )
-${{Only:TruthJet,GenParticle,Jet,Muon,Electron: , Particle() }}
+${{Only:TruthJet,GenParticle,Jet,Muon,Electron,Tau: , Particle() }}
 
 ${{Only:Jet,TruthJet:
   , m_isTagged( false )
@@ -72,7 +72,7 @@ ${{Only:Jet:
 }
 
 
-${{Only:Muon,Electron:
+${{Only:Muon,Electron,Tau:
 bool sort${Object}Pt::operator()( const ${Object}& e1,
                                  const ${Object}& e2 ) {
   return ( e1.pt() > e2.pt() ) ? true : false;
@@ -84,7 +84,7 @@ bool operator<<( const ${Object}& e1, const ${Object}& e2 ) {
 }
 }}
 
-${{Only:Muon,Jet,TruthJet,Electron:
+${{Only:Muon,Jet,TruthJet,Electron,Tau:
 
 TLorentzVector* ${Object}::getTLV() const {
 
