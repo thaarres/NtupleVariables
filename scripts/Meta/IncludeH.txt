@@ -43,7 +43,7 @@ ${{Only:Jet,Muon,Electron,Tau,TruthJet,GenParticle: , public Particle }}
     
     /// c'tor with index
     ${Object}( const Ntuple::${Object}NtupleObject* ana, const Int_t idx );
-${{Only:Muon,Electron,Jet,TruthJet,GenParticle:
+${{Only:Muon,Electron,Tau,Jet,TruthJet,GenParticle:
     TLorentzVector* getTLV() const;
     TLorentzVector tlv() const;
 }}
@@ -91,7 +91,7 @@ ${{AllVars:    void #name#( const #type#& val){ *(m_#name#)=val;NOPOINTER } }}
   typedef std::vector< ${Object} >::const_iterator ${Object}VecConstIt;
 
 
-${{Only:Muon,Electron:
+${{Only:Muon,Electron,Tau:
   /// sort ${Object}s by pT
   bool operator<( const ${Object}& e1, const ${Object}& e2 );
 

@@ -33,7 +33,7 @@ namespace Ntuple {
     // get instance of NtupleObjectNames
     NtupleObjectNames m_objectNames(ntupleType);
     
-${{Only:Muon,Electron,Jet,TruthJet,GenParticle:
+${{Only:Muon,Electron,Tau,Jet,TruthJet,GenParticle:
     // particle vector size
     ConnectVariable( treeName, prefix + m_objectNames.getName("N"), N );
 }}    

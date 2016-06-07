@@ -50,6 +50,10 @@ namespace UZH {
 
     floatingnumber* m_corrPx;
     floatingnumber* m_corrPy;
+    floatingnumber* m_significance;
+    floatingnumber* m_cov00;
+    floatingnumber* m_cov10;
+    floatingnumber* m_cov11;
     floatingnumber* m_et;
     floatingnumber* m_phi;
     floatingnumber* m_sumEt;
@@ -63,12 +67,20 @@ namespace UZH {
     // check level given here must be consistent with ...NtupleObject.cxx, otherwise you'll get a segfault
     floatingnumber corrPx() const { /*if(!m_ana->getConnectSucceeded(Ntuple::MissingEtNtupleObject::kcorrPx)) std::cout<<"corrPx not connected!"<<std::endl;*/ return *(m_corrPx); } 
     floatingnumber corrPy() const { /*if(!m_ana->getConnectSucceeded(Ntuple::MissingEtNtupleObject::kcorrPy)) std::cout<<"corrPy not connected!"<<std::endl;*/ return *(m_corrPy); } 
+    floatingnumber significance() const { /*if(!m_ana->getConnectSucceeded(Ntuple::MissingEtNtupleObject::ksignificance)) std::cout<<"significance not connected!"<<std::endl;*/ return *(m_significance); } 
+    floatingnumber cov00() const { /*if(!m_ana->getConnectSucceeded(Ntuple::MissingEtNtupleObject::kcov00)) std::cout<<"cov00 not connected!"<<std::endl;*/ return *(m_cov00); } 
+    floatingnumber cov10() const { /*if(!m_ana->getConnectSucceeded(Ntuple::MissingEtNtupleObject::kcov10)) std::cout<<"cov10 not connected!"<<std::endl;*/ return *(m_cov10); } 
+    floatingnumber cov11() const { /*if(!m_ana->getConnectSucceeded(Ntuple::MissingEtNtupleObject::kcov11)) std::cout<<"cov11 not connected!"<<std::endl;*/ return *(m_cov11); } 
     floatingnumber et() const { /*if(!m_ana->getConnectSucceeded(Ntuple::MissingEtNtupleObject::ket)) std::cout<<"et not connected!"<<std::endl;*/ return *(m_et); } 
     floatingnumber phi() const { /*if(!m_ana->getConnectSucceeded(Ntuple::MissingEtNtupleObject::kphi)) std::cout<<"phi not connected!"<<std::endl;*/ return *(m_phi); } 
     floatingnumber sumEt() const { /*if(!m_ana->getConnectSucceeded(Ntuple::MissingEtNtupleObject::ksumEt)) std::cout<<"sumEt not connected!"<<std::endl;*/ return *(m_sumEt); } 
     
     void corrPx( const floatingnumber& val){ *(m_corrPx)=val; } 
     void corrPy( const floatingnumber& val){ *(m_corrPy)=val; } 
+    void significance( const floatingnumber& val){ *(m_significance)=val; } 
+    void cov00( const floatingnumber& val){ *(m_cov00)=val; } 
+    void cov10( const floatingnumber& val){ *(m_cov10)=val; } 
+    void cov11( const floatingnumber& val){ *(m_cov11)=val; } 
     void et( const floatingnumber& val){ *(m_et)=val; } 
     void phi( const floatingnumber& val){ *(m_phi)=val; } 
     void sumEt( const floatingnumber& val){ *(m_sumEt)=val; } 

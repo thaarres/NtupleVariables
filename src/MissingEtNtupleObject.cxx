@@ -42,6 +42,10 @@ namespace Ntuple {
 if(  ((detail_level & Ntuple::MissingEtAnalysis) == Ntuple::MissingEtAnalysis)  ) {
      setConnectSucceeded(4, ConnectVariable( treeName, prefix + m_objectNames.getName("corrPx"), corrPx)); 
     setConnectSucceeded(5, ConnectVariable( treeName, prefix + m_objectNames.getName("corrPy"), corrPy)); 
+    setConnectSucceeded(6, ConnectVariable( treeName, prefix + m_objectNames.getName("significance"), significance)); 
+    setConnectSucceeded(7, ConnectVariable( treeName, prefix + m_objectNames.getName("cov00"), cov00)); 
+    setConnectSucceeded(8, ConnectVariable( treeName, prefix + m_objectNames.getName("cov10"), cov10)); 
+    setConnectSucceeded(9, ConnectVariable( treeName, prefix + m_objectNames.getName("cov11"), cov11)); 
 } // end of detail level Analysis
 
 if(  ((detail_level & Ntuple::MissingEtBasic) == Ntuple::MissingEtBasic)  ) {
