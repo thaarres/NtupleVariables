@@ -45,6 +45,7 @@ namespace Ntuple {
     JetTruth = 64,
     JetBasic = 128,
     JetAll = 255,
+    GenJet = 512,
 
   };
   
@@ -102,32 +103,32 @@ namespace Ntuple {
      kcemf=25, 
      kcsv=1, 
      kcharge=2, 
-     ksubjet_pruned_N=43, 
-     ksubjet_pruned_pt=44, 
-     ksubjet_pruned_eta=45, 
-     ksubjet_pruned_phi=46, 
-     ksubjet_pruned_e=47, 
-     ksubjet_pruned_m=48, 
-     ksubjet_pruned_csv=49, 
-     ksubjet_pruned_charge=50, 
-     ksubjet_pruned_partonFlavour=51, 
-     ksubjet_pruned_hadronFlavour=52, 
-     ksubjet_pruned_genParton_pdgID=53, 
-     ksubjet_pruned_nbHadrons=54, 
-     ksubjet_pruned_ncHadrons=55, 
-     ksubjet_softdrop_N=56, 
-     ksubjet_softdrop_pt=57, 
-     ksubjet_softdrop_eta=58, 
-     ksubjet_softdrop_phi=59, 
-     ksubjet_softdrop_e=60, 
-     ksubjet_softdrop_m=61, 
-     ksubjet_softdrop_csv=62, 
-     ksubjet_softdrop_charge=63, 
-     ksubjet_softdrop_partonFlavour=64, 
-     ksubjet_softdrop_hadronFlavour=65, 
-     ksubjet_softdrop_genParton_pdgID=66, 
-     ksubjet_softdrop_nbHadrons=67, 
-     ksubjet_softdrop_ncHadrons=68, 
+     ksubjet_pruned_N=42, 
+     ksubjet_pruned_pt=43, 
+     ksubjet_pruned_eta=44, 
+     ksubjet_pruned_phi=45, 
+     ksubjet_pruned_e=46, 
+     ksubjet_pruned_m=47, 
+     ksubjet_pruned_csv=48, 
+     ksubjet_pruned_charge=49, 
+     ksubjet_pruned_partonFlavour=50, 
+     ksubjet_pruned_hadronFlavour=51, 
+     ksubjet_pruned_genParton_pdgID=52, 
+     ksubjet_pruned_nbHadrons=53, 
+     ksubjet_pruned_ncHadrons=54, 
+     ksubjet_softdrop_N=55, 
+     ksubjet_softdrop_pt=56, 
+     ksubjet_softdrop_eta=57, 
+     ksubjet_softdrop_phi=58, 
+     ksubjet_softdrop_e=59, 
+     ksubjet_softdrop_m=60, 
+     ksubjet_softdrop_csv=61, 
+     ksubjet_softdrop_charge=62, 
+     ksubjet_softdrop_partonFlavour=63, 
+     ksubjet_softdrop_hadronFlavour=64, 
+     ksubjet_softdrop_genParton_pdgID=65, 
+     ksubjet_softdrop_nbHadrons=66, 
+     ksubjet_softdrop_ncHadrons=67, 
      ktau1=26, 
      ktau2=27, 
      ktau3=28, 
@@ -139,13 +140,13 @@ namespace Ntuple {
      kpruned_jecUp=34, 
      kpruned_jecDown=35, 
      ksoftdrop_jec=36, 
-     kHbbtag=37, 
-     kpartonFlavour=38, 
-     khadronFlavour=39, 
-     kgenParton_pdgID=40, 
-     knbHadrons=41, 
-     kncHadrons=42, 
- 
+     kpartonFlavour=37, 
+     khadronFlavour=38, 
+     kgenParton_pdgID=39, 
+     knbHadrons=40, 
+     kncHadrons=41, 
+     kprunedmass=68,
+     ksoftdropmass=69,
       kEnd 
     }; 
 
@@ -222,12 +223,13 @@ namespace Ntuple {
     std::vector< floatingnumber >  *pruned_jecUp;
     std::vector< floatingnumber >  *pruned_jecDown;
     std::vector< floatingnumber >  *softdrop_jec;
-    std::vector< floatingnumber >  *Hbbtag;
     std::vector< int >  *partonFlavour;
     std::vector< int >  *hadronFlavour;
     std::vector< int >  *genParton_pdgID;
     std::vector< int >  *nbHadrons;
     std::vector< int >  *ncHadrons;
+    std::vector< floatingnumber >  *prunedmass;
+    std::vector< floatingnumber >  *softdropmass;
 
 
     std::vector<int> m_connectsucceeded;

@@ -57,6 +57,8 @@ namespace Ntuple {
       ConnectVariable( treeName, m_objectNames.getName("passFilter_TrkPOG_logError"), passFilter_TrkPOG_logError );
       ConnectVariable( treeName, m_objectNames.getName("passFilter_METFilters"), passFilter_METFilters );
       ConnectVariable( treeName, m_objectNames.getName("PV_filter"), PV_filter );
+      ConnectVariable( treeName, m_objectNames.getName("passFilter_muonBadTrack"), passFilter_muonBadTrack);
+      ConnectVariable( treeName, m_objectNames.getName("passFilter_chargedHadronTrackResolution"), passFilter_chargedHadronTrackResolution);
     }
     
     return;

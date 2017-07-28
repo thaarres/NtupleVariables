@@ -79,41 +79,41 @@ if(  ((detail_level & Ntuple::JetBasic) == Ntuple::JetBasic)  ) {
 } // end of detail level Basic
 
 if(  ((detail_level & Ntuple::JetPrunedSubjets) == Ntuple::JetPrunedSubjets)  ) {
-     setConnectSucceeded(43, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_N"), subjet_pruned_N)); 
-    setConnectSucceeded(44, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_pt"), subjet_pruned_pt)); 
-    setConnectSucceeded(45, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_eta"), subjet_pruned_eta)); 
-    setConnectSucceeded(46, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_phi"), subjet_pruned_phi)); 
-    setConnectSucceeded(47, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_e"), subjet_pruned_e)); 
-    setConnectSucceeded(48, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_m"), subjet_pruned_m)); 
-    setConnectSucceeded(49, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_csv"), subjet_pruned_csv)); 
-    setConnectSucceeded(50, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_charge"), subjet_pruned_charge)); 
+     setConnectSucceeded(42, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_N"), subjet_pruned_N)); 
+    setConnectSucceeded(43, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_pt"), subjet_pruned_pt)); 
+    setConnectSucceeded(44, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_eta"), subjet_pruned_eta)); 
+    setConnectSucceeded(45, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_phi"), subjet_pruned_phi)); 
+    setConnectSucceeded(46, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_e"), subjet_pruned_e)); 
+    setConnectSucceeded(47, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_m"), subjet_pruned_m)); 
+    setConnectSucceeded(48, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_csv"), subjet_pruned_csv)); 
+    setConnectSucceeded(49, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_charge"), subjet_pruned_charge)); 
 } // end of detail level PrunedSubjets
 
 if(  ((detail_level & Ntuple::JetPrunedSubjetsTruth) == Ntuple::JetPrunedSubjetsTruth)  ) {
-     setConnectSucceeded(51, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_partonFlavour"), subjet_pruned_partonFlavour)); 
-    setConnectSucceeded(52, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_hadronFlavour"), subjet_pruned_hadronFlavour)); 
-    setConnectSucceeded(53, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_genParton_pdgID"), subjet_pruned_genParton_pdgID)); 
-    setConnectSucceeded(54, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_nbHadrons"), subjet_pruned_nbHadrons)); 
-    setConnectSucceeded(55, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_ncHadrons"), subjet_pruned_ncHadrons)); 
+     setConnectSucceeded(50, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_partonFlavour"), subjet_pruned_partonFlavour)); 
+    setConnectSucceeded(51, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_hadronFlavour"), subjet_pruned_hadronFlavour)); 
+    setConnectSucceeded(52, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_genParton_pdgID"), subjet_pruned_genParton_pdgID)); 
+    setConnectSucceeded(53, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_nbHadrons"), subjet_pruned_nbHadrons)); 
+    setConnectSucceeded(54, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_pruned_ncHadrons"), subjet_pruned_ncHadrons)); 
 } // end of detail level PrunedSubjetsTruth
 
 if(  ((detail_level & Ntuple::JetSoftdropSubjets) == Ntuple::JetSoftdropSubjets)  ) {
-     setConnectSucceeded(56, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_N"), subjet_softdrop_N)); 
-    setConnectSucceeded(57, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_pt"), subjet_softdrop_pt)); 
-    setConnectSucceeded(58, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_eta"), subjet_softdrop_eta)); 
-    setConnectSucceeded(59, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_phi"), subjet_softdrop_phi)); 
-    setConnectSucceeded(60, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_e"), subjet_softdrop_e)); 
-    setConnectSucceeded(61, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_m"), subjet_softdrop_m)); 
-    setConnectSucceeded(62, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_csv"), subjet_softdrop_csv)); 
-    setConnectSucceeded(63, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_charge"), subjet_softdrop_charge)); 
+     setConnectSucceeded(55, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_N"), subjet_softdrop_N)); 
+    setConnectSucceeded(56, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_pt"), subjet_softdrop_pt)); 
+    setConnectSucceeded(57, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_eta"), subjet_softdrop_eta)); 
+    setConnectSucceeded(58, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_phi"), subjet_softdrop_phi)); 
+    setConnectSucceeded(59, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_e"), subjet_softdrop_e)); 
+    setConnectSucceeded(60, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_m"), subjet_softdrop_m)); 
+    setConnectSucceeded(61, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_csv"), subjet_softdrop_csv)); 
+    setConnectSucceeded(62, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_charge"), subjet_softdrop_charge)); 
 } // end of detail level SoftdropSubjets
 
 if(  ((detail_level & Ntuple::JetSoftdropSubjetsTruth) == Ntuple::JetSoftdropSubjetsTruth)  ) {
-     setConnectSucceeded(64, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_partonFlavour"), subjet_softdrop_partonFlavour)); 
-    setConnectSucceeded(65, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_hadronFlavour"), subjet_softdrop_hadronFlavour)); 
-    setConnectSucceeded(66, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_genParton_pdgID"), subjet_softdrop_genParton_pdgID)); 
-    setConnectSucceeded(67, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_nbHadrons"), subjet_softdrop_nbHadrons)); 
-    setConnectSucceeded(68, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_ncHadrons"), subjet_softdrop_ncHadrons)); 
+     setConnectSucceeded(63, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_partonFlavour"), subjet_softdrop_partonFlavour)); 
+    setConnectSucceeded(64, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_hadronFlavour"), subjet_softdrop_hadronFlavour)); 
+    setConnectSucceeded(65, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_genParton_pdgID"), subjet_softdrop_genParton_pdgID)); 
+    setConnectSucceeded(66, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_nbHadrons"), subjet_softdrop_nbHadrons)); 
+    setConnectSucceeded(67, ConnectVariable( treeName, prefix + m_objectNames.getName("subjet_softdrop_ncHadrons"), subjet_softdrop_ncHadrons)); 
 } // end of detail level SoftdropSubjetsTruth
 
 if(  ((detail_level & Ntuple::JetSubstructure) == Ntuple::JetSubstructure)  ) {
@@ -128,16 +128,20 @@ if(  ((detail_level & Ntuple::JetSubstructure) == Ntuple::JetSubstructure)  ) {
     setConnectSucceeded(34, ConnectVariable( treeName, prefix + m_objectNames.getName("pruned_jecUp"), pruned_jecUp)); 
     setConnectSucceeded(35, ConnectVariable( treeName, prefix + m_objectNames.getName("pruned_jecDown"), pruned_jecDown)); 
     setConnectSucceeded(36, ConnectVariable( treeName, prefix + m_objectNames.getName("softdrop_jec"), softdrop_jec)); 
-    setConnectSucceeded(37, ConnectVariable( treeName, prefix + m_objectNames.getName("Hbbtag"), Hbbtag)); 
 } // end of detail level Substructure
 
 if(  ((detail_level & Ntuple::JetTruth) == Ntuple::JetTruth)  ) {
-     setConnectSucceeded(38, ConnectVariable( treeName, prefix + m_objectNames.getName("partonFlavour"), partonFlavour)); 
-    setConnectSucceeded(39, ConnectVariable( treeName, prefix + m_objectNames.getName("hadronFlavour"), hadronFlavour)); 
-    setConnectSucceeded(40, ConnectVariable( treeName, prefix + m_objectNames.getName("genParton_pdgID"), genParton_pdgID)); 
-    setConnectSucceeded(41, ConnectVariable( treeName, prefix + m_objectNames.getName("nbHadrons"), nbHadrons)); 
-    setConnectSucceeded(42, ConnectVariable( treeName, prefix + m_objectNames.getName("ncHadrons"), ncHadrons)); 
+     setConnectSucceeded(37, ConnectVariable( treeName, prefix + m_objectNames.getName("partonFlavour"), partonFlavour)); 
+    setConnectSucceeded(38, ConnectVariable( treeName, prefix + m_objectNames.getName("hadronFlavour"), hadronFlavour)); 
+    setConnectSucceeded(39, ConnectVariable( treeName, prefix + m_objectNames.getName("genParton_pdgID"), genParton_pdgID)); 
+    setConnectSucceeded(40, ConnectVariable( treeName, prefix + m_objectNames.getName("nbHadrons"), nbHadrons)); 
+    setConnectSucceeded(41, ConnectVariable( treeName, prefix + m_objectNames.getName("ncHadrons"), ncHadrons)); 
 }
+
+if(  ((detail_level & Ntuple::GenJet) == Ntuple::GenJet)  ) {
+    setConnectSucceeded(68, ConnectVariable( treeName, prefix + m_objectNames.getName("prunedmass"), prunedmass)); 
+    setConnectSucceeded(69, ConnectVariable( treeName, prefix + m_objectNames.getName("softdropmass"), softdropmass)); 
+} // end of detail level GenJet
 
 
         

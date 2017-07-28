@@ -100,7 +100,9 @@ namespace Ntuple {
     bool	passFilter_TrkPOG_logError;
     bool	passFilter_METFilters;
     bool  PV_filter;
-
+    bool  passFilter_muonBadTrack;
+    bool  passFilter_chargedHadronTrackResolution;
+    
     // save actual detail_level
     Int_t detailLevel;
 

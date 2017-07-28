@@ -74,6 +74,8 @@ namespace Ntuple {
     m_names["passFilter_TrkPOG_logError"] = "passFilter_TrkPOG_logError";
     m_names["passFilter_METFilters"] = "passFilter_METFilters";
     m_names["PV_filter"] = "PV_filter";
+    m_names["passFilter_muonBadTrack"] = "passFilter_muonBadTrack";
+    m_names["passFilter_chargedHadronTrackResolution"] = "passFilter_chargedHadronTrackResolution";
     
     // gen particles
     m_names["pdgId"] = "pdgId";
@@ -90,11 +92,7 @@ namespace Ntuple {
     m_names["corrPx"] = "corrPx";
     m_names["corrPy"] = "corrPy";
     m_names["sumEt"] = "sumEt";
-    m_names["significance"] = "significance";
-    m_names["cov00"] = "cov00";
-    m_names["cov10"] = "cov10";
-    m_names["cov11"] = "cov11";
-
+    
     // jets
     // flavour
     m_names["csv"] = "csv";
@@ -144,8 +142,11 @@ namespace Ntuple {
     m_names["softdrop_jec"] = "softdrop_jec";
     m_names["softdrop_jecUp"] = "softdrop_jecUp";
     m_names["softdrop_jecDown"] = "softdrop_jecDown";
-    m_names["Hbbtag"] = "Hbbtag";
-
+    
+    //substructure gen
+    m_names["prunedmass"] = "prunedmass";
+    m_names["softdropmass"] = "softdropmass";
+    
     // pruned subjets
     m_names["subjet_pruned_N"] = "subjet_pruned_N";
     m_names["subjet_pruned_e"] = "subjet_pruned_e";
@@ -231,47 +232,6 @@ namespace Ntuple {
     m_names["isPFMuon"] = "isPFMuon";
     m_names["isGlobalMuon"] = "isGlobalMuon";
     m_names["isSoftMuon"] = "isSoftMuon";
-
-    //taus
-    m_names["TauType"] = "TauType";
-    m_names["decayModeFindingNewDMs"] = "decayModeFindingNewDMs" ;
-    m_names["decayModeFinding"] = "decayModeFinding" ;
-    m_names["byLooseCombinedIsolationDeltaBetaCorr3Hits"] = "byLooseCombinedIsolationDeltaBetaCorr3Hits" ;
-    m_names["byMediumCombinedIsolationDeltaBetaCorr3Hits"] = "byMediumCombinedIsolationDeltaBetaCorr3Hits" ;
-    m_names["byTightCombinedIsolationDeltaBetaCorr3Hits"] = "byTightCombinedIsolationDeltaBetaCorr3Hits" ;
-    m_names["byCombinedIsolationDeltaBetaCorrRaw3Hits"] = "byCombinedIsolationDeltaBetaCorrRaw3Hits" ;
-    m_names["chargedIsoPtSum"] = "chargedIsoPtSum" ;
-    m_names["neutralIsoPtSum"] = "neutralIsoPtSum" ;
-    m_names["puCorrPtSum"] = "puCorrPtSum" ;
-    m_names["byIsolationMVA3oldDMwLTraw"] = "byIsolationMVA3oldDMwLTraw" ;
-    m_names["byVLooseIsolationMVA3oldDMwLT"] = "byVLooseIsolationMVA3oldDMwLT" ;
-    m_names["byLooseIsolationMVA3oldDMwLT"] = "byLooseIsolationMVA3oldDMwLT" ;
-    m_names["byMediumIsolationMVA3oldDMwLT"] = "byMediumIsolationMVA3oldDMwLT" ;
-    m_names["byTightIsolationMVA3oldDMwLT"] = "byTightIsolationMVA3oldDMwLT" ;
-    m_names["byVTightIsolationMVA3oldDMwLT"] = "byVTightIsolationMVA3oldDMwLT" ;
-    m_names["byIsolationMVA3newDMwLTraw"] = "byIsolationMVA3newDMwLTraw" ;
-    m_names["byVLooseIsolationMVA3newDMwLT"] = "byVLooseIsolationMVA3newDMwLT" ;
-    m_names["byLooseIsolationMVA3newDMwLT"] = "byLooseIsolationMVA3newDMwLT" ;
-    m_names["byMediumIsolationMVA3newDMwLT"] = "byMediumIsolationMVA3newDMwLT" ;
-    m_names["byTightIsolationMVA3newDMwLT"] = "byTightIsolationMVA3newDMwLT" ;
-    m_names["byVTightIsolationMVA3newDMwLT"] = "byVTightIsolationMVA3newDMwLT" ;
-    m_names["againstElectronMVA5raw"] = "againstElectronMVA5raw" ;
-    m_names["againstElectronMVA5category"] = "againstElectronMVA5category" ;
-    m_names["againstElectronVLooseMVA5"] = "againstElectronVLooseMVA5" ;
-    m_names["againstElectronLooseMVA5"] = "againstElectronLooseMVA5" ;
-    m_names["againstElectronMediumMVA5"] = "againstElectronMediumMVA5" ;
-    m_names["againstElectronTightMVA5"] = "againstElectronTightMVA5" ;
-    m_names["againstElectronVTightMVA5"] = "againstElectronVTightMVA5" ;
-    m_names["againstMuonLoose3"] = "againstMuonLoose3" ;
-    m_names["againstMuonTight3"] = "againstMuonTight3" ;
-    m_names["byPileupWeightedIsolationRaw3Hits"] = "byPileupWeightedIsolationRaw3Hits" ;
-    m_names["byLoosePileupWeightedIsolation3Hits"] = "byLoosePileupWeightedIsolation3Hits" ;
-    m_names["byMediumPileupWeightedIsolation3Hits"] = "byMediumPileupWeightedIsolation3Hits" ;
-    m_names["byTightPileupWeightedIsolation3Hits"] = "byTightPileupWeightedIsolation3Hits" ;
-    m_names["byPhotonPtSumOutsideSignalCone"] = "byPhotonPtSumOutsideSignalCone" ;
-    m_names["footprintCorrection"] = "footprintCorrection" ;
-
-
 
     // tracking
     m_names["d0"] = "d0";

@@ -15,9 +15,10 @@ Jet::Jet() {
 Jet::Jet( const Ntuple::JetNtupleObject* ana, const Int_t idx ) 
 : Basic( idx )
  , Particle() 
-
-
-  , m_isTagged( false )
+ , puppi_softdropmass(-99)
+ , puppi_tau1(-99)
+ , puppi_tau2(-99)
+ , m_isTagged( false )
 
 {
   m_ana=ana;
@@ -70,41 +71,41 @@ if(  ((ana->detailLevel & Ntuple::JetBasic) == Ntuple::JetBasic)  ) {
 } // end of detail level Basic
 
 if(  ((ana->detailLevel & Ntuple::JetPrunedSubjets) == Ntuple::JetPrunedSubjets)  ) {
-     if (ana->m_connectsucceeded[43]) m_subjet_pruned_N = &((*ana->subjet_pruned_N)[idx]); else m_subjet_pruned_N = 0; 
-    if (ana->m_connectsucceeded[44]) m_subjet_pruned_pt = &((*ana->subjet_pruned_pt)[idx]); else m_subjet_pruned_pt = 0; 
-    if (ana->m_connectsucceeded[45]) m_subjet_pruned_eta = &((*ana->subjet_pruned_eta)[idx]); else m_subjet_pruned_eta = 0; 
-    if (ana->m_connectsucceeded[46]) m_subjet_pruned_phi = &((*ana->subjet_pruned_phi)[idx]); else m_subjet_pruned_phi = 0; 
-    if (ana->m_connectsucceeded[47]) m_subjet_pruned_e = &((*ana->subjet_pruned_e)[idx]); else m_subjet_pruned_e = 0; 
-    if (ana->m_connectsucceeded[48]) m_subjet_pruned_m = &((*ana->subjet_pruned_m)[idx]); else m_subjet_pruned_m = 0; 
-    if (ana->m_connectsucceeded[49]) m_subjet_pruned_csv = &((*ana->subjet_pruned_csv)[idx]); else m_subjet_pruned_csv = 0; 
-    if (ana->m_connectsucceeded[50]) m_subjet_pruned_charge = &((*ana->subjet_pruned_charge)[idx]); else m_subjet_pruned_charge = 0; 
+     if (ana->m_connectsucceeded[42]) m_subjet_pruned_N = &((*ana->subjet_pruned_N)[idx]); else m_subjet_pruned_N = 0; 
+    if (ana->m_connectsucceeded[43]) m_subjet_pruned_pt = &((*ana->subjet_pruned_pt)[idx]); else m_subjet_pruned_pt = 0; 
+    if (ana->m_connectsucceeded[44]) m_subjet_pruned_eta = &((*ana->subjet_pruned_eta)[idx]); else m_subjet_pruned_eta = 0; 
+    if (ana->m_connectsucceeded[45]) m_subjet_pruned_phi = &((*ana->subjet_pruned_phi)[idx]); else m_subjet_pruned_phi = 0; 
+    if (ana->m_connectsucceeded[46]) m_subjet_pruned_e = &((*ana->subjet_pruned_e)[idx]); else m_subjet_pruned_e = 0; 
+    if (ana->m_connectsucceeded[47]) m_subjet_pruned_m = &((*ana->subjet_pruned_m)[idx]); else m_subjet_pruned_m = 0; 
+    if (ana->m_connectsucceeded[48]) m_subjet_pruned_csv = &((*ana->subjet_pruned_csv)[idx]); else m_subjet_pruned_csv = 0; 
+    if (ana->m_connectsucceeded[49]) m_subjet_pruned_charge = &((*ana->subjet_pruned_charge)[idx]); else m_subjet_pruned_charge = 0; 
 } // end of detail level PrunedSubjets
 
 if(  ((ana->detailLevel & Ntuple::JetPrunedSubjetsTruth) == Ntuple::JetPrunedSubjetsTruth)  ) {
-     if (ana->m_connectsucceeded[51]) m_subjet_pruned_partonFlavour = &((*ana->subjet_pruned_partonFlavour)[idx]); else m_subjet_pruned_partonFlavour = 0; 
-    if (ana->m_connectsucceeded[52]) m_subjet_pruned_hadronFlavour = &((*ana->subjet_pruned_hadronFlavour)[idx]); else m_subjet_pruned_hadronFlavour = 0; 
-    if (ana->m_connectsucceeded[53]) m_subjet_pruned_genParton_pdgID = &((*ana->subjet_pruned_genParton_pdgID)[idx]); else m_subjet_pruned_genParton_pdgID = 0; 
-    if (ana->m_connectsucceeded[54]) m_subjet_pruned_nbHadrons = &((*ana->subjet_pruned_nbHadrons)[idx]); else m_subjet_pruned_nbHadrons = 0; 
-    if (ana->m_connectsucceeded[55]) m_subjet_pruned_ncHadrons = &((*ana->subjet_pruned_ncHadrons)[idx]); else m_subjet_pruned_ncHadrons = 0; 
+     if (ana->m_connectsucceeded[50]) m_subjet_pruned_partonFlavour = &((*ana->subjet_pruned_partonFlavour)[idx]); else m_subjet_pruned_partonFlavour = 0; 
+    if (ana->m_connectsucceeded[51]) m_subjet_pruned_hadronFlavour = &((*ana->subjet_pruned_hadronFlavour)[idx]); else m_subjet_pruned_hadronFlavour = 0; 
+    if (ana->m_connectsucceeded[52]) m_subjet_pruned_genParton_pdgID = &((*ana->subjet_pruned_genParton_pdgID)[idx]); else m_subjet_pruned_genParton_pdgID = 0; 
+    if (ana->m_connectsucceeded[53]) m_subjet_pruned_nbHadrons = &((*ana->subjet_pruned_nbHadrons)[idx]); else m_subjet_pruned_nbHadrons = 0; 
+    if (ana->m_connectsucceeded[54]) m_subjet_pruned_ncHadrons = &((*ana->subjet_pruned_ncHadrons)[idx]); else m_subjet_pruned_ncHadrons = 0; 
 } // end of detail level PrunedSubjetsTruth
 
 if(  ((ana->detailLevel & Ntuple::JetSoftdropSubjets) == Ntuple::JetSoftdropSubjets)  ) {
-     if (ana->m_connectsucceeded[56]) m_subjet_softdrop_N = &((*ana->subjet_softdrop_N)[idx]); else m_subjet_softdrop_N = 0; 
-    if (ana->m_connectsucceeded[57]) m_subjet_softdrop_pt = &((*ana->subjet_softdrop_pt)[idx]); else m_subjet_softdrop_pt = 0; 
-    if (ana->m_connectsucceeded[58]) m_subjet_softdrop_eta = &((*ana->subjet_softdrop_eta)[idx]); else m_subjet_softdrop_eta = 0; 
-    if (ana->m_connectsucceeded[59]) m_subjet_softdrop_phi = &((*ana->subjet_softdrop_phi)[idx]); else m_subjet_softdrop_phi = 0; 
-    if (ana->m_connectsucceeded[60]) m_subjet_softdrop_e = &((*ana->subjet_softdrop_e)[idx]); else m_subjet_softdrop_e = 0; 
-    if (ana->m_connectsucceeded[61]) m_subjet_softdrop_m = &((*ana->subjet_softdrop_m)[idx]); else m_subjet_softdrop_m = 0; 
-    if (ana->m_connectsucceeded[62]) m_subjet_softdrop_csv = &((*ana->subjet_softdrop_csv)[idx]); else m_subjet_softdrop_csv = 0; 
-    if (ana->m_connectsucceeded[63]) m_subjet_softdrop_charge = &((*ana->subjet_softdrop_charge)[idx]); else m_subjet_softdrop_charge = 0; 
+     if (ana->m_connectsucceeded[55]) m_subjet_softdrop_N = &((*ana->subjet_softdrop_N)[idx]); else m_subjet_softdrop_N = 0; 
+    if (ana->m_connectsucceeded[56]) m_subjet_softdrop_pt = &((*ana->subjet_softdrop_pt)[idx]); else m_subjet_softdrop_pt = 0; 
+    if (ana->m_connectsucceeded[57]) m_subjet_softdrop_eta = &((*ana->subjet_softdrop_eta)[idx]); else m_subjet_softdrop_eta = 0; 
+    if (ana->m_connectsucceeded[58]) m_subjet_softdrop_phi = &((*ana->subjet_softdrop_phi)[idx]); else m_subjet_softdrop_phi = 0; 
+    if (ana->m_connectsucceeded[59]) m_subjet_softdrop_e = &((*ana->subjet_softdrop_e)[idx]); else m_subjet_softdrop_e = 0; 
+    if (ana->m_connectsucceeded[60]) m_subjet_softdrop_m = &((*ana->subjet_softdrop_m)[idx]); else m_subjet_softdrop_m = 0; 
+    if (ana->m_connectsucceeded[61]) m_subjet_softdrop_csv = &((*ana->subjet_softdrop_csv)[idx]); else m_subjet_softdrop_csv = 0; 
+    if (ana->m_connectsucceeded[62]) m_subjet_softdrop_charge = &((*ana->subjet_softdrop_charge)[idx]); else m_subjet_softdrop_charge = 0; 
 } // end of detail level SoftdropSubjets
 
 if(  ((ana->detailLevel & Ntuple::JetSoftdropSubjetsTruth) == Ntuple::JetSoftdropSubjetsTruth)  ) {
-     if (ana->m_connectsucceeded[64]) m_subjet_softdrop_partonFlavour = &((*ana->subjet_softdrop_partonFlavour)[idx]); else m_subjet_softdrop_partonFlavour = 0; 
-    if (ana->m_connectsucceeded[65]) m_subjet_softdrop_hadronFlavour = &((*ana->subjet_softdrop_hadronFlavour)[idx]); else m_subjet_softdrop_hadronFlavour = 0; 
-    if (ana->m_connectsucceeded[66]) m_subjet_softdrop_genParton_pdgID = &((*ana->subjet_softdrop_genParton_pdgID)[idx]); else m_subjet_softdrop_genParton_pdgID = 0; 
-    if (ana->m_connectsucceeded[67]) m_subjet_softdrop_nbHadrons = &((*ana->subjet_softdrop_nbHadrons)[idx]); else m_subjet_softdrop_nbHadrons = 0; 
-    if (ana->m_connectsucceeded[68]) m_subjet_softdrop_ncHadrons = &((*ana->subjet_softdrop_ncHadrons)[idx]); else m_subjet_softdrop_ncHadrons = 0; 
+     if (ana->m_connectsucceeded[63]) m_subjet_softdrop_partonFlavour = &((*ana->subjet_softdrop_partonFlavour)[idx]); else m_subjet_softdrop_partonFlavour = 0; 
+    if (ana->m_connectsucceeded[64]) m_subjet_softdrop_hadronFlavour = &((*ana->subjet_softdrop_hadronFlavour)[idx]); else m_subjet_softdrop_hadronFlavour = 0; 
+    if (ana->m_connectsucceeded[65]) m_subjet_softdrop_genParton_pdgID = &((*ana->subjet_softdrop_genParton_pdgID)[idx]); else m_subjet_softdrop_genParton_pdgID = 0; 
+    if (ana->m_connectsucceeded[66]) m_subjet_softdrop_nbHadrons = &((*ana->subjet_softdrop_nbHadrons)[idx]); else m_subjet_softdrop_nbHadrons = 0; 
+    if (ana->m_connectsucceeded[67]) m_subjet_softdrop_ncHadrons = &((*ana->subjet_softdrop_ncHadrons)[idx]); else m_subjet_softdrop_ncHadrons = 0; 
 } // end of detail level SoftdropSubjetsTruth
 
 if(  ((ana->detailLevel & Ntuple::JetSubstructure) == Ntuple::JetSubstructure)  ) {
@@ -119,16 +120,23 @@ if(  ((ana->detailLevel & Ntuple::JetSubstructure) == Ntuple::JetSubstructure)  
     if (ana->m_connectsucceeded[34]) m_pruned_jecUp = &((*ana->pruned_jecUp)[idx]); else m_pruned_jecUp = 0; 
     if (ana->m_connectsucceeded[35]) m_pruned_jecDown = &((*ana->pruned_jecDown)[idx]); else m_pruned_jecDown = 0; 
     if (ana->m_connectsucceeded[36]) m_softdrop_jec = &((*ana->softdrop_jec)[idx]); else m_softdrop_jec = 0; 
-    if (ana->m_connectsucceeded[37]) m_Hbbtag = &((*ana->Hbbtag)[idx]); else m_Hbbtag = 0; 
 } // end of detail level Substructure
 
 if(  ((ana->detailLevel & Ntuple::JetTruth) == Ntuple::JetTruth)  ) {
-     if (ana->m_connectsucceeded[38]) m_partonFlavour = &((*ana->partonFlavour)[idx]); else m_partonFlavour = 0; 
-    if (ana->m_connectsucceeded[39]) m_hadronFlavour = &((*ana->hadronFlavour)[idx]); else m_hadronFlavour = 0; 
-    if (ana->m_connectsucceeded[40]) m_genParton_pdgID = &((*ana->genParton_pdgID)[idx]); else m_genParton_pdgID = 0; 
-    if (ana->m_connectsucceeded[41]) m_nbHadrons = &((*ana->nbHadrons)[idx]); else m_nbHadrons = 0; 
-    if (ana->m_connectsucceeded[42]) m_ncHadrons = &((*ana->ncHadrons)[idx]); else m_ncHadrons = 0; 
+     if (ana->m_connectsucceeded[37]) m_partonFlavour = &((*ana->partonFlavour)[idx]); else m_partonFlavour = 0; 
+    if (ana->m_connectsucceeded[38]) m_hadronFlavour = &((*ana->hadronFlavour)[idx]); else m_hadronFlavour = 0; 
+    if (ana->m_connectsucceeded[39]) m_genParton_pdgID = &((*ana->genParton_pdgID)[idx]); else m_genParton_pdgID = 0; 
+    if (ana->m_connectsucceeded[40]) m_nbHadrons = &((*ana->nbHadrons)[idx]); else m_nbHadrons = 0; 
+    if (ana->m_connectsucceeded[41]) m_ncHadrons = &((*ana->ncHadrons)[idx]); else m_ncHadrons = 0; 
 }
+
+if(  ((ana->detailLevel & Ntuple::GenJet) == Ntuple::GenJet)  ) {
+  if (ana->m_connectsucceeded[68]) m_prunedmass   = &((*ana->prunedmass)  [idx]); else m_prunedmass   = 0; 
+  if (ana->m_connectsucceeded[69]) m_softdropmass = &((*ana->softdropmass)[idx]); else m_softdropmass = 0; 
+
+} // end of detail level GenJet
+
+
 
 
 
@@ -242,7 +250,6 @@ if(  ((rhs.getLvl() & Ntuple::JetSubstructure) == Ntuple::JetSubstructure)  ) {
   out << " pruned_jecUp " << rhs.pruned_jecUp();
   out << " pruned_jecDown " << rhs.pruned_jecDown();
   out << " softdrop_jec " << rhs.softdrop_jec();
-  out << " Hbbtag " << rhs.Hbbtag();
 ;
 } // end of detail level Substructure
 
@@ -255,6 +262,11 @@ if(  ((rhs.getLvl() & Ntuple::JetTruth) == Ntuple::JetTruth)  ) {
 ;
 }
 
+if(  ((rhs.getLvl() & Ntuple::GenJet) == Ntuple::GenJet)  ) {
+  out << " prunedmass " << rhs.prunedmass();
+  out << " softdropmass " << rhs.softdropmass();
+;
+} // end of detail level genjet
 
   return out;
 }
