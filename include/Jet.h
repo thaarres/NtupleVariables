@@ -51,6 +51,7 @@ namespace UZH {
     float puppi_softdropmass;
     float puppi_tau1;
     float puppi_tau2;
+    float puppi_tau3;
 
 
     bool            m_isTagged; ///< user-level flag to indicate b-tag

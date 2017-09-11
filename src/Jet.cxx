@@ -18,6 +18,7 @@ Jet::Jet( const Ntuple::JetNtupleObject* ana, const Int_t idx )
  , puppi_softdropmass(-99)
  , puppi_tau1(-99)
  , puppi_tau2(-99)
+ , puppi_tau3(-99)
  , m_isTagged( false )
 
 {
