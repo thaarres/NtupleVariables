@@ -52,6 +52,7 @@ namespace UZH {
     float puppi_tau1;
     float puppi_tau2;
     float puppi_tau3;
+    float highestSubJetCSV;
 
 
     bool            m_isTagged; ///< user-level flag to indicate b-tag
