@@ -1,7 +1,3 @@
-
-// THIS FILE HAS BEEN GENERATED AUTOMATICALLY. DO NOT EDIT DIRECTLY, CHANGES WILL BE LOST UPON NEXT CODE GENERATION.
-// Code produced by Id: CodeIt.py 494 2010-07-30 13:41:32Z svn 
-
 #include "../include/Jet.h"
 
 using namespace std;
